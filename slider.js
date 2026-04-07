@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const cardCount = cards.length;
   let autoSlideInterval;
 
-  
+
   cards.forEach(card => {
     const clone = card.cloneNode(true);
     track.appendChild(clone);
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     clearInterval(autoSlideInterval);
   }
 
-  
+
   const prevBtn = document.getElementById('achievements-prev');
   const nextBtn = document.getElementById('achievements-next');
 
@@ -87,14 +87,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
- 
+
   const section = track.closest('section');
   if (section) {
     section.addEventListener('mouseenter', stopAutoSlide);
     section.addEventListener('mouseleave', startAutoSlide);
   }
 
-  
+
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startAutoSlide();
   }, { passive: true });
 
- 
+
   window.addEventListener('resize', () => {
     track.style.transition = 'none';
     currentOffset = 0;
